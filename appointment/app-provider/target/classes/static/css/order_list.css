@@ -1,0 +1,130 @@
+.page-header{
+    padding: 0 10px;
+    background-color: #f2711c;
+}
+
+.page-header a{
+    font-size: 17px;
+    color: #fff;
+    line-height: 46px;
+    display: block;
+    text-align: center;
+}
+
+.page-header a > span:first-child{
+    float: left;
+}
+
+.main-body{
+    padding: 0;
+}
+
+.order-list{
+
+}
+
+.order-list .order{
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.order-list .order .o-time{
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.order-list .order .o-time > p{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.order-list .order .o-time > p.time{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.order-list .order .o-time > p.date{
+    margin: 5px 0;
+}
+
+.order-list .order .o-time > p.status{
+    display: inline-block;
+    line-height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+.order-list .order .o-time.green > p.status{
+    border: 1px solid #21ba45;
+}
+
+.order-list .order .o-time.red > p.status{
+    border: 1px solid #db2828;
+}
+
+.order-list .order .o-time.olive > p.status{
+    border: 1px solid #b5cc18;
+}
+
+.order-list .order .o-time.teal > p.status{
+    border: 1px solid #00b5ad;
+}
+
+.order-list .order .o-info{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.order-list .order .o-info p{
+    line-height: 15px;
+}
+
+.order-list .order .o-info .merchant,
+.order-list .order .o-info .user{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.order-list .order .o-info .service{
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.order-list .order .o-info .address{
+    font-size: 12px;
+    color: #999;
+}
+
+.order-list .order .action{
+    float: right;
+    padding-top: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.order-list .order .action button{
+    background-color: #21ba45;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 4px;
+}
+
+.order-list .order .action button.olive{
+    background-color: #b5cc18;
+}
+
+@keyframes more-size {
+    from{
+
+    }
+
+}

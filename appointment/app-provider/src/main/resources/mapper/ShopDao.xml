@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sofwin.app.dao.ShopDao">
+    <select id="findAllRecom" resultType="cn.sofwin.app.entity.Shop">
+        select
+            *
+        from
+            app_shop
+        where
+            recom = 1
+    </select>
+    <select id="fingShopById" resultType="cn.sofwin.app.entity.Shop">
+        select
+            *
+        from
+            app_shop
+        where
+            id = #{id}
+    </select>
+
+    <select id="findByMenu" resultType="cn.sofwin.app.entity.Shop">
+
+        select
+            *
+        from
+            app_shop
+        where
+            category = #{id}
+    </select>
+
+    <select id="fingByUserId" resultType="cn.sofwin.app.entity.Shop">
+        select
+            *
+        from
+            app_shop
+        where
+            userid = #{id}
+    </select>
+    <insert id="insertShop">
+        insert into
+            app_shop(userid,shopname,shopbrief,shopaddress,yyzzurl,indexurl,buypeople,sellcount,shopdetail,stoptime,category,recom)
+        values
+            (#{userid},#{shopname},#{shopbrief},#{shopaddress},#{yyzzurl},#{indexurl},#{buypeople},#{sellcount},#{shopdetail},#{stoptime},#{category},#{recom})
+    </insert>
+</mapper>

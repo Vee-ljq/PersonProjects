@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+
+<div id = app>
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="header-top">
+            <a href="index.html">
+                <span>&lt;</span>
+                <span>服务详情</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <div class="service-header">
+            <div class="image">
+                <img :src="shopmsg.indexurl">
+                <div class="desc">
+                    <p class="title" v-text="shopmsg.shopname"></p>
+                    <p v-text="shopmsg.shopbrief"></p>
+                </div>
+            </div>
+            <div class="order-info">
+                <div class="action">
+                    <label>截止时间: </label>
+                    <span class="time" v-text="shopmsg.stoptime"></span>
+                    <button type="button" @click="nowapp(shopmsg.id)">立即预约</button>
+                    <button type="button" style="margin-right: 90px;" @click="nowcol(shopmsg.id)">立即收藏</button>
+                </div>
+                <div class="info">
+                    <div class="item">
+                        <i class="fas fa-tag"></i>
+                        <span>先到先得</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-tag"></i>
+                        <span>逾期自动取消</span>
+                    </div>
+                    <div class="item">
+                        <span>已售</span>
+                        <span v-text="shopmsg.sellcount"></span>
+                        <span>份</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <div class="title">
+                <span>服务详情</span>
+            </div>
+            <div class="content" v-text="shopmsg.shopdetail">
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+</div>
+
+</body>
+<script src="lib/vue.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/axios.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/service.js"></script>
+</html>

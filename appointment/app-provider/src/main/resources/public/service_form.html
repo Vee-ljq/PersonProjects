@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/service_form.css">
+</head>
+<body>
+
+<div id = app>
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="header-top">
+            <a href="uc.html">
+                <span>&lt;</span>
+                <span>服务设置</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <form class="service-form">
+            <div class="image-field">
+                <input type="file" class="hide" id="fileInput" onchange="previewImage(this)">
+                <img :src="pd.service.imageData">
+                <label>封面图片</label>
+                <div class="buttons">
+                    <button type="button" @click="showSelect">选择</button>
+                    <button type="button" @click="upload">上传</button>
+                </div>
+            </div>
+            <div class="field">
+                <label>名称：</label>
+                <input type="text" v-model="pd.service.goodsname">
+            </div>
+            <div class="field">
+                <label>截止：</label>
+                <input type="text" v-model="pd.service.stoptime">
+            </div>
+            <div class="field">
+                <label>地址：</label>
+                <input type="text" v-model="pd.service.goodsaddress">
+            </div>
+            <div class="field">
+                <label>简介：</label>
+                <input type="text" v-model="pd.service.goodsbrief">
+            </div>
+            <div class="field tx">
+                <label>详情：</label>
+                <textarea v-model="pd.service.goodsdetail"></textarea>
+            </div>
+            <div class="action">
+                <button type="button" @click="saveForm">保存</button>
+            </div>
+        </form>
+
+
+    </div>
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+</div>
+
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/vue.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/service_form.js"></script>
+</html>

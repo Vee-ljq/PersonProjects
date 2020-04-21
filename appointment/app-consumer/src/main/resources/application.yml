@@ -1,0 +1,10 @@
+server:
+  port: 88
+
+dubbo:
+  application:
+    name: user-consumer
+  registry:
+    address: zookeeper://192.168.1.104:2181
+  scan:
+    base-packages: cn.sofwin.app.service

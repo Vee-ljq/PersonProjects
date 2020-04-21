@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sofwin.app.dao.OrderDao">
+
+    <resultMap id="selectAllDaiApp" type="cn.sofwin.app.dto.OrderDto">
+        <id column="id" property="id"/>
+        <result column="useid" property="useid"/>
+        <result column="shopid" property="shopid"/>
+        <result column="status" property="status"/>
+        <result column="date" property="date"/>
+        <result column="time" property="time"/>
+        <association property="shop" javaType="cn.sofwin.app.entity.Shop">
+            <result column="shopname" property="shopname"/>
+            <result column="shopbrief" property="shopbrief"/>
+            <result column="shopaddress" property="shopaddress"/>
+        </association>
+    </resultMap>
+    <select id="findAllDaiApp" resultMap="selectAllDaiApp">
+        select
+            a.*,b.shopname,b.shopbrief,b.shopaddress
+        from
+            app_order a
+        left join
+            app_shop b
+        on
+            a.shopid = b.id
+        <where>
+            useid = #{userid}
+            <if test="flag!=4">
+               and status = #{flag}
+            </if>
+
+        </where>
+
+
+    </select>
+
+    <update id="updateOrderStatus">
+        update
+            app_order
+        set
+            status = #{status}
+        where
+            id = #{id}
+    </update>
+    <resultMap id="selectOrderDai" type="cn.sofwin.app.dto.OrderDto">
+        <id column="id" property="id"/>
+        <result column="useid" property="useid"/>
+        <result column="shopid" property="shopid"/>
+        <result column="status" property="status"/>
+        <result column="date" property="date"/>
+        <result column="time" property="time"/>
+        <association property="shop" javaType="cn.sofwin.app.entity.Shop">
+            <result column="shopname" property="shopname"/>
+            <result column="shopaddress" property="shopaddress"/>
+        </association>
+        <association property="user" javaType="cn.sofwin.app.entity.User">
+            <result column="nickname" property="nickname"/>
+        </association>
+    </resultMap>
+    <select id="findShopDai" resultMap="selectOrderDai">
+        select
+            a.*,b.nickname,c.shopname,c.shopbrief,c.shopaddress
+        from
+            app_order a
+        left join
+            app_user b
+        on
+            a.useid = b.id
+        left join
+            app_shop c
+        on
+            a.shopid=c.id
+        <where>
+            shopid = #{shopid}
+            <if test="status!=4">
+                and status = #{status}
+            </if>
+        </where>
+
+    </select>
+
+    <insert id="insertOrder">
+        insert into
+            app_order(useid,shopid,status,date,time)
+        values
+            (#{useid},#{shopid},#{status},#{date},#{time})
+    </insert>
+
+</mapper>

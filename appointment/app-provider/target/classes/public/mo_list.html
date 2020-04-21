@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/order_list.css">
+</head>
+<body>
+
+<div id = app>
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="header-top">
+            <a href="uc.html">
+                <span>&lt;</span>
+                <span>我的预约</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <ul class="order-list" v-for="s in shopmsg">
+            <li class="order">
+                <div class="o-time green">
+                    <p class="time" v-text="s.date"></p>
+                    <p class="date" v-text="s.time"></p>
+                    <p class="status" v-if="s.status == 0">待赴约</p>
+                    <p class="status" v-if="s.status == 1">待评价</p>
+                    <p class="status" v-if="s.status == 2">已完成</p>
+                    <p class="status" v-if="s.status == 3">已违约</p>
+                </div>
+                <div class="o-info">
+                    <p class="user" v-text="s.nickname"></p>
+                    <p class="service" v-text="s.shopname"></p>
+                    <p class="address" v-text="s.shopaddress"></p>
+                </div>
+                <div class="action">
+                    <button type="button" v-if="s.status == 0" @click="jiedai(s.id)">接待</button>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+</div>
+
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/vue.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/mo_list.js"></script>
+</html>

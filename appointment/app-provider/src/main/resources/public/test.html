@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>测试</title>
+</head>
+<body>
+    <button type="button" id="loadBtn">加载</button>
+</body>
+<script src="lib/axios.min.js"></script>
+<script>
+    let button = document.getElementById("loadBtn");
+    button.onclick = function () {
+        axios.get("http://120.79.233.29/api/wj/hello").then(function (response) {
+            alert(response.data.code);
+        });
+    }
+
+</script>
+</html>

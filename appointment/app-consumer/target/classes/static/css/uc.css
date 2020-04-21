@@ -1,0 +1,269 @@
+.page-header{
+    padding-top: 55px;
+}
+
+.page-header .user-header{
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    padding: 15px;
+}
+
+.page-header .user-header .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../img/c1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(15px);
+}
+
+.page-header .user-header .avatar{
+    display: inline-block;
+    height: 65px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.page-header .user-header .avatar img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ddd
+}
+
+.page-header .user-header .info{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.page-header .user-header .info .title{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.page-header .user-header .info .account{
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.page-header .user-header .setting{
+    display: inline-block;
+    float: right;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 65px;
+}
+
+.main-body{
+    padding: 0 0 40px 0;
+}
+
+.page-menu{
+    text-align: center;
+}
+
+.page-menu span{
+    display: inline-block;
+    margin: 15px 10px;
+    line-height: 26px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 0 15px;
+}
+
+.page-menu span.active{
+    color: #fff;
+    background-color: #f2711c;
+}
+
+.user-menus,
+.order-block,
+.service-block{
+    margin: 10px 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.order-block .title,
+.service-block .title{
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-block .title i,
+.service-block .title i{
+    margin-right: 2px;
+}
+
+
+.order-block .items{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.order-block .items .item{
+    padding: 0 15px;
+    display: block;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.order-block .items .item span{
+    line-height: 50px;
+}
+
+.order-block .items .item span.tip{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    text-align: center;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #db2828;
+}
+
+.service-block .title span{
+
+}
+
+.service-block .title > a{
+    display: inline-block;
+    font-size: 20px;
+    float: right;
+}
+
+.service-block .service{
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.service-block .service .image{
+    display: inline-block;
+    width: 25%;
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.service-block .service img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.service-block .service .content{
+    width: 50%;
+    display: inline-block;
+}
+
+.service-block .service .action{
+    width: 25%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.service-block .service .action label{
+    background-color: #eee;
+    color: #777;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+
+.service-block .service .action label.enable{
+    color: #fff;
+    background-color: #21ba45;
+}
+
+.service-block .service .action label.wait{
+    color: #fff;
+    background-color: #fbbd08;
+}
+
+.service-block .service .action label.disable{
+
+}
+
+
+.user-menus{
+
+}
+
+.user-menus a{
+    font-size: 16px;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-menus a i{
+    margin-right: 5px;
+}
+
+.user-menus a > span:last-child{
+    float: right;
+}
+
+.apply{
+    text-align: center;
+}
+
+.apply-info{
+    margin: 20px 0;
+    color: #999;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.apply .button{
+    display: inline-block;
+    background-color: #F97150;
+    color: #fff;
+    line-height: 30px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 15px;
+    margin: 10px 0;
+    animation: btn-orange 0.5s linear infinite alternate;
+}
+
+@keyframes btn-orange {
+    from{
+        box-shadow: none;
+    }
+    to{
+        box-shadow: 0 0 4px #f90709;
+    }
+}
+
+
+
+

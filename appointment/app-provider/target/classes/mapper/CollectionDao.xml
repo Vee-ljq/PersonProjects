@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sofwin.app.dao.CollectionDao">
+
+    <resultMap id="selectCollection" type="cn.sofwin.app.dto.CollectionDto">
+        <id column="id" property="id"/>
+        <result column="useid" property="useid"/>
+        <result column="shopid" property="shopid"/>
+        <result column="date" property="date"/>
+        <result column="time" property="time"/>
+        <association property="shop" javaType="cn.sofwin.app.entity.Shop">
+            <result column="shopname" property="shopname"/>
+            <result column="shopbrief" property="shopbrief"/>
+            <result column="shopaddress" property="shopaddress"/>
+        </association>
+    </resultMap>
+    <select id="findCollectionByUserid" resultMap="selectCollection">
+        SELECT
+            a.*,b.shopname,b.shopbrief,b.shopaddress
+        FROM
+            `app_collection` a
+        left join
+            app_shop b
+        on
+            a.shopid=b.id
+        where
+            a.useid = #{id}
+    </select>
+
+    <delete id="deleteCollectionById">
+        delete from
+            app_collection
+        where
+            id = #{id}
+    </delete>
+
+    <insert id="insertCollection">
+        insert into
+            app_collection(useid,shopid,date,time)
+        values
+            (#{useid},#{shopid},#{date},#{time})
+    </insert>
+</mapper>

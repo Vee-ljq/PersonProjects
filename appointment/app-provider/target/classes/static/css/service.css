@@ -1,0 +1,136 @@
+.page-header{
+    padding: 0 10px;
+    background-color: #f2711c;
+}
+
+.page-header a{
+    font-size: 17px;
+    color: #fff;
+    line-height: 46px;
+    display: block;
+    text-align: center;
+}
+
+.page-header a > span:first-child{
+    float: left;
+}
+
+.main-body{
+    padding: 0 0 40px 0;
+}
+
+.service-header{
+    background-color: #fff;
+}
+
+.service-header .image{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.service-header .image img{
+    width: 100%;
+}
+
+.service-header .image .desc{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.service-header .image .desc .title{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.service-header .order-info{
+    padding: 10px;
+}
+
+.service-header .order-info .action{
+    position: relative;
+    padding: 10px 0 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.service-header .order-info .action label{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    color: #00b5ad;
+    vertical-align: bottom;
+}
+
+.service-header .order-info .action .time{
+    display: inline-block;
+    font-size: 30px;
+    line-height: 30px;
+    color: #00b5ad;
+    vertical-align: bottom;
+}
+
+.service-header .order-info .action button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    background-color: #f2711c;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 0 10px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    vertical-align: bottom;
+}
+
+.service-header .order-info .info{
+    padding: 10px 0 0 0;
+}
+
+.service-header .order-info .info .item{
+    display: inline-block;
+    font-size: 12px;
+    color: #21ba45;
+    margin-right: 15px;
+}
+
+.service-header .order-info .info .item:last-child{
+    float: right;
+    margin-right: 25px;
+}
+
+.service-header .order-info .info .item i{
+    margin-right: 4px;
+}
+
+.service-block{
+    margin: 10px 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.service-block .title{
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.service-block .content{
+    padding: 10px 15px;
+}
+
+.service-block .content p{
+    margin-bottom: 10px;
+}

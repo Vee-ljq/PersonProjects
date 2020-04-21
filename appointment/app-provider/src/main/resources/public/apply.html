@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/apply.css">
+</head>
+<body>
+
+<div id = app>
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="header-top">
+            <a href="uc.html">
+                <span>&lt;</span>
+                <span>商户申请</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <form class="service-form">
+            <div class="image-field">
+                <input type="file" class="hide" id="fileInput1" onchange="previewImage(this)">
+                <img :src="pd.service.imageData">
+                <label>营业执照</label>
+                <div class="buttons">
+                    <button type="button" @click="showSelect">选择</button>
+                    <button type="button" @click="upload">上传</button>
+                </div>
+            </div>
+            <div class="image-field">
+                <input type="file" class="hide" id="fileInput2" onchange="previewImage1(this)">
+                <img :src="pd.service.imageData1">
+                <label>商铺图片</label>
+                <div class="buttons">
+                    <button type="button" @click="showSelect1">选择</button>
+                    <button type="button" @click="upload1">上传</button>
+                </div>
+            </div>
+            <div class="field">
+                <label>商户名称：</label>
+                <input type="text" v-model="pd.service.shopname">
+            </div>
+            <div class="field">
+                <label>联系地址：</label>
+                <input type="text" v-model="pd.service.shopaddress">
+            </div>
+            <div class="field">
+                <label>店铺简介：</label>
+                <input type="text" v-model="pd.service.shopbrief">
+            </div>
+            <div class="field">
+                <label>店铺详情：</label>
+                <input type="text" v-model="pd.service.shopdetail">
+            </div>
+            <div class="field">
+                <label>截止时间：</label>
+                <input type="text" v-model="pd.service.stoptime">
+            </div>
+            <div class="field">
+                <label>商铺类别：</label>
+                <select v-model="pd.service.category">
+                    <option value="2">课程</option>
+                    <option value="3">美食</option>
+                    <option value="4">美容</option>
+                    <option value="5">健身</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>是否推荐：</label>
+                <select v-model="pd.service.recom">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </div>
+            <div class="action">
+                <button type="button" @click="saveForm">提交申请</button>
+            </div>
+        </form>
+
+
+    </div>
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+</div>
+
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/vue.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/apply.js"></script>
+</html>

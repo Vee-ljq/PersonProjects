@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/order_list.css">
+</head>
+<body>
+
+<div id = app>
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="header-top">
+            <a href="uc.html">
+                <span>&lt;</span>
+                <span>我的预约</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <ul class="order-list" v-for="d in dlist">
+            <li class="order" >
+                <div class="o-time green">
+                    <p class="time" v-text="d.date"></p>
+                    <p class="date" v-text="d.time"></p>
+                    <p class="status" v-if="d.status == 0">请赴约</p>
+                    <p class="status" v-if="d.status == 1">请评价</p>
+                    <p class="status" v-if="d.status == 2">已完成</p>
+                    <p class="status" v-if="d.status == 3">已违约</p>
+                </div>
+                <div class="o-info">
+                    <p class="merchant" v-text="d.merchant"></p>
+                    <p class="service" v-text="d.service"></p>
+                    <p class="address" v-text="d.address"></p>
+                </div>
+                <div class="action">
+                    <button type="button" v-if="d.status == 0" @click="sign(d.id)">签到</button>
+                    <button type="button" v-if="d.status == 1" @click="evaluate(d.id)">评价</button>
+                    <button type="button" v-if="d.status == 2">完成</button>
+                    <button type="button" v-if="d.status == 3">违约</button>
+                </div>
+            </li>
+
+
+        </ul>
+
+    </div>
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+</div>
+
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/vue.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/uo_list.js"></script>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32b3eeea-e75c-4b49-ba5d-0058ab7c4390" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\mavenWorkspace" />
+        <option name="mavenHome" value="F:/maven/apache-maven-3.3.9-bin/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="F:\maven\apache-maven-3.3.9-bin\apache-maven-3.3.9\conf\settings.xml" />
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yqlx3eOBpirrmdYmW4b2zzl1of" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.sofwin.app.Application" />
+      <module name="app-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.sofwin.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32b3eeea-e75c-4b49-ba5d-0058ab7c4390" name="Default Changelist" comment="" />
+      <created>1583678248549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583678248549</updated>
+      <workItem from="1583678251282" duration="713000" />
+      <workItem from="1583758949662" duration="660000" />
+      <workItem from="1584089277047" duration="890000" />
+      <workItem from="1584090204665" duration="544000" />
+      <workItem from="1584090758773" duration="494000" />
+      <workItem from="1584091319795" duration="444000" />
+      <workItem from="1584091802722" duration="1011000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="140" y="136" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584089964887">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="140" y="136" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584089964887" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1584091624822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584091624822" />
+    <state x="273" y="110" key="SettingsEditor" timestamp="1584092564983">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="273" y="110" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584092564983" />
+  </component>
+</project>

@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    color: #666;
+    margin: 0 auto;
+    min-width: 375px;
+    max-width: 640px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-color: #F9F9F9;
+    font-family: -apple-system, Helvetica, sans-serif, "Microsoft YaHei", "宋体";
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a, input, select, textarea, button{
+    outline: none;
+    -webkit-appearance: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.hide{
+    display: none;
+}
+
+.center_aligned{
+    text-align: center;
+}
+
+.right_aligned{
+    text-align: right;
+}
+
+.red{
+    color: #db2828;
+}
+
+.orange{
+    color: #f2711c;
+}
+
+.yellow{
+    color: #fbbd08;
+}
+
+.olive{
+    color: #b5cc18;
+}
+
+.green{
+    color: #21ba45;
+}
+
+.teal{
+    color: #00b5ad;
+}
+
+.blue{
+    color: #2185d0;
+}
+
+.violet{
+    color: #6435c9;
+}
+
+.purple{
+    color: #a333c8;
+}
+
+.pink{
+    color: #e03997;
+}
+
+.brown{
+    color: #a5673f;
+}
+
+.teal{
+    color: #00b5ad;
+}
+
+
+.page-header{
+    width: 100%;
+    padding-top: 65px;
+}
+
+.page-header .top-bar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 999;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.page-header .top-bar a,
+.page-header .top-bar span{
+    line-height: 50px;
+}
+
+.page-header .top-bar .brand{
+    display: inline-block;
+    font-size: 17px;
+    line-height: 17px;
+    display: inline-block;
+}
+
+.page-header .top-bar .brand i{
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.page-header .top-bar .brand span{
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    vertical-align: middle;
+}
+
+.page-header .top-bar .toolbox{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.page-header .top-bar .toolbox i{
+    color: #888;
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.page-header .top-bar .toolbox img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.main-body{
+    padding: 15px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page-foot{
+    position: relative;
+    margin: 50px 0 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.page-foot .hr{
+    position: absolute;
+    top: 10px;
+    height: 1px;
+    width: 100%;
+    z-index: -1;
+    background-color: #ddd;
+}
+
+.page-foot .info{
+    display: inline-block;
+    line-height: 20px;
+    background-color: #F9F9F9;
+    padding: 0 10px;
+}
+
+
+

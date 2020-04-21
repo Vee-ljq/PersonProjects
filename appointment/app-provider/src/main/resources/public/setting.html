@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/setting.css">
+</head>
+<body>
+
+<div id = app>
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="header-top">
+            <a href="uc.html">
+                <span>&lt;</span>
+                <span>账户设置</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <ul class="setting-menus">
+            <li class="menu" @click="showDialog('nicknameForm')">
+                <i class="far fa-user"></i>
+                <span>修改昵称</span>
+                <span>&gt;</span>
+            </li>
+            <li class="menu" @click="showDialog('mobileForm')">
+                <i class="fas fa-mobile-alt"></i>
+                <span>修改手机</span>
+                <span>&gt;</span>
+            </li>
+            <li class="menu" @click="showDialog('passwordForm')">
+                <i class="fas fa-lock"></i>
+                <span>修改密码</span>
+                <span> &gt;</span>
+            </li>
+            <li class="menu" @click="showDialog('avatarForm')">
+                <i class="far fa-grin-beam"></i>
+                <span>更换头像</span>
+                <span>&gt;</span>
+            </li>
+        </ul>
+        <div class="user-actions">
+            <a href="index.html" class="button">退出登录</a>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+    <!-- 修改昵称 -->
+    <div id="nicknameForm" class="dialog">
+        <div class="title">修改昵称</div>
+        <div class="content">
+            <form class="lc-form" action="/app/user/updateNickname" method="post">
+                <div class="field">
+                    <label>新昵称</label>
+                    <input type="text" placeholder="请输入新昵称" name="nickname">
+                </div>
+                <div class="action-field">
+                    <button type="submit" class="green">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 修改手机 -->
+    <div id="mobileForm" class="dialog">
+        <div class="title">修改手机</div>
+        <div class="content">
+            <form class="lc-form" action="/app/user/updatePhone" method="post">
+                <div class="field">
+                    <label>新手机：</label>
+                    <input type="tel" placeholder="请输入新手机号" name="phone">
+                </div>
+                <div class="field code">
+                    <label>验证码：</label>
+                    <input type="text" >
+                    <img id="code_img" class="code-img" src="https://www.oschina.net/action/user/captcha">
+                </div>
+                <div class="action-field">
+                    <button type="submit" class="green">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 修改密码 -->
+    <div id="passwordForm" class="dialog">
+        <div class="title">修改密码</div>
+        <div class="content">
+            <form id="checkpwd" class="lc-form" action="/app/user/updatePwd">
+                <div class="field">
+                    <label>旧密码</label>
+                    <input id="oldpwd" type="text" placeholder="请输入旧密码" name="oldpwd">
+                </div>
+                <div class="field">
+                    <label>新密码</label>
+                    <input id="newpwd1" type="text" placeholder="请输入新密码" name="newpwd">
+                </div>
+                <div class="field">
+                    <label>新密码</label>
+                    <input id="newpwd2" type="text" placeholder="请再次输入新密码">
+                </div>
+                <div class="action-field">
+                    <button type="button" @click="checkpwd()" class="green">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 修改头像 -->
+    <div id="avatarForm" class="dialog">
+        <div class="title">修改头像</div>
+        <div class="content">
+            <div class="image">
+                <img :src="user.avatar">
+            </div>
+            <div class="actions">
+                <input id="image_input" class="image_input" type="file" onchange="showImagePreView(this)">
+                <button type="button" class="blue" onclick="selectFile()">选择图片</button>
+                <button type="button" class="red" onclick="saveAvatar()">保存头像</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="lib/vue.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/setting.js"></script>
+</html>

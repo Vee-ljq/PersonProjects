@@ -1,0 +1,227 @@
+.page-header{
+    padding: 0 10px;
+    background-color: #f2711c;
+}
+
+.page-header a{
+    font-size: 17px;
+    color: #fff;
+    line-height: 46px;
+    display: block;
+    text-align: center;
+}
+
+.page-header a > span:first-child{
+    float: left;
+}
+
+.main-body{
+    padding: 0;
+}
+
+.setting-menus{
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+.setting-menus .menu{
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.setting-menus .menu i{
+    font-size: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.setting-menus .menu > span{
+    vertical-align: middle;
+}
+
+.setting-menus .menu > span:last-child{
+    float: right;
+}
+
+.user-actions{
+    margin: 30px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.user-actions .button{
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 34px;
+    width: 100%;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    background-color: #db2828;
+}
+
+.dialog{
+    display: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.dialog .title{
+    line-height: 40px;
+    font-size: 17px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.dialog .lc-form{
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.dialog .lc-form .field{
+    display: block;
+    font-size: 15px;
+    position: relative;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.dialog .lc-form .field > label{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    text-align: right;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.dialog .lc-form .field > input{
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #bcbcbc;
+    width: 60%;
+    height: 28px;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+
+.dialog .lc-form .field.code > input{
+    width: 40%;
+}
+.dialog .lc-form .field > select{
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #bcbcbc;
+    width: 68%;
+    height: 28px;
+    padding: 0 10px;
+}
+
+.dialog .lc-form .field .code-img{
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dialog .lc-form .field .code-sms{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    color: #666;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+}
+
+.dialog .lc-form .action-field{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dialog .lc-form .action-field button{
+    padding: 0 15px;
+    margin: 0 10px;
+    height: 26px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+
+.dialog .content{
+    padding: 10px;
+}
+
+.dialog .image{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dialog .image img{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.dialog .image_input{
+    display: none;
+}
+
+.dialog .actions{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dialog .actions button{
+    padding: 0 15px;
+    margin: 0 5px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+}
+
+.dialog button{
+    color: #777;
+    background-color: #ddd;
+}
+
+.dialog button.purple{
+    color: #FFF;
+    background-color:#bd0fe1;
+}
+
+.dialog button.red{
+    color: #FFF;
+    background-color:#db2828;
+}
+
+.dialog button.green{
+    color: #FFF;
+    background-color:#21ba45;
+}
+
+.dialog button.blue{
+    color: #FFF;
+    background-color:#2185d0;
+}
+
+.dialog button.orange{
+    color: #FFF;
+    background-color:#f2711c;
+}

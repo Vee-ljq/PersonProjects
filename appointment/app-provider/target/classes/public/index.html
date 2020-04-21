@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>预约宝</title>
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div id = app>
+
+    <!-- 页头 -->
+    <div class="page-header">
+        <div class="top-bar">
+            <div class="top-bar-items">
+                <a href="index.html" class="brand">
+                    <i class="far fa-clock yellow"></i>
+                    <span class="brand orange">预约宝</span>
+                </a>
+                <div class="toolbox">
+
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="/app/user/login">
+                        <i class="far fa-user"></i>
+                        <img src="img/cat.jpg" class="hide">
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <ul>
+                    <li v-for="m in pd.navs.menus" :class="{active : pd.navs.mid == m.id }" @click="changeMenu(m.id)">
+                        <span v-text="m.title"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="swiper-container act-loop">
+            <div class="swiper-wrapper">
+                <a v-for="c in pd.carousel" :href="c.url" class="swiper-slide">
+                    <img :src="c.img">
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="main-body">
+        <div class="service-list">
+            <div class="service-block">
+                <h4 class="title">火热预约</h4>
+                <div class="content">
+                    <ul class="services">
+                        <li v-for="s in pd.services" class="service">
+                            <div class="image">
+                               <img :src="s.image">
+                            </div>
+                            <div class="info">
+                                <p class="desc" v-text="s.summary"></p>
+                                <div class="items">
+                                    <div class="item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span v-text="s.address"></span>
+                                    </div>
+                                    <div class="item">
+                                        <i class="far fa-user"></i>
+                                        <span v-text="s.sell"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a class="btn" :href="'/app/shop/btnappointment?id=' + s.id">预约</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="page-foot">
+        <div class="hr"></div>
+        <span class="info">&copy;2019 软赢科技 版权所有</span>
+    </div>
+
+</div>
+
+</body>
+<script src="lib/vue.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/swiper/swiper.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>
